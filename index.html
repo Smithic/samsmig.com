@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <style>
     p {
-  border: 2px solid powderblue;
-}
+      border: 2px solid powderblue;
+    }
+    #myImage {
+      transition: transform 0.5s; /* Smooth transition for rotation */
+    }
   </style>
   <title>My Favourite Hobby</title>
 </head>
 <body style="background-color:tomato;">
-  <h1>I love the new fortnite season :)</h1>
-  <img id ='myImage' src="https://raw.githubusercontent.com/Smithic/samsmig.com/main/meow.jpg">
+  <h1>I love the new Fortnite season :)</h1>
+  <img id="myImage" src="https://raw.githubusercontent.com/Smithic/samsmig.com/main/meow.jpg" width="300">
   
   <p>
-    Meowscles fortnite
+    Meowscles Fortnite
   </p>
-<form> 
-<button
-  type = "button" onclick = "f1()">I love fortnite <3
-</button>
-</form>
-  <script>
-        let rotationDegree = 0;
+  <form> 
+    <button type="button" onclick="rotateImage()">I love Fortnite <3</button>
+  </form>
 
-        document.getElementById('rotateButton').addEventListener('click', function() {
-            rotationDegree += 90; // Increase rotation by 90 degrees
-            document.getElementById('myImage').style.transform = `rotate(${rotationDegree}deg)`;
-        });
-    </script>
+  <script>
+    let rotationDegree = 0;
+
+    function rotateImage() {
+      rotationDegree += 90; // Increase rotation by 90 degrees
+      document.getElementById('myImage').style.transform = `rotate(${rotationDegree}deg)`;
+    }
+  </script>
   
 </body>
 </html>
