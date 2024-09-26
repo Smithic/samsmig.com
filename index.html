@@ -6,7 +6,6 @@
   <title>My Favourite Hobby</title>
   <style>
     body {
-      background-color: tomato;
       display: flex;
       flex-direction: column;
       align-items: center; /* Center horizontally */
@@ -15,6 +14,15 @@
       margin: 0; /* Remove default margin */
       text-align: center; /* Center text */
       font-family: 'Comic Sans MS', cursive, sans-serif; /* Set font to Comic Sans */
+      animation: colorChange 10s infinite alternate; /* Apply background color animation */
+    }
+
+    @keyframes colorChange {
+      0% { background-color: tomato; }
+      25% { background-color: lightblue; }
+      50% { background-color: lightgreen; }
+      75% { background-color: lavender; }
+      100% { background-color: tomato; }
     }
 
     p {
