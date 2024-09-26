@@ -14,18 +14,21 @@
       height: 100vh; /* Full height of the viewport */
       margin: 0; /* Remove default margin */
       text-align: center; /* Center text */
+      font-family: 'Comic Sans MS', cursive, sans-serif; /* Set font to Comic Sans */
     }
 
     p {
       border: 2px solid powderblue;
       padding: 10px;
       margin: 20px 0; /* Add margin for spacing */
+      animation: jump 1s infinite; /* Apply jump animation */
     }
 
     #myImage {
       transition: transform 0.5s; /* Smooth transition for rotation */
       max-width: 100%; /* Make image responsive */
       height: auto; /* Maintain aspect ratio */
+      animation: jump 1s infinite; /* Apply jump animation */
     }
 
     /* Styles for the massive button */
@@ -37,10 +40,21 @@
       border-radius: 10px; /* Rounded corners */
       cursor: pointer; /* Change cursor on hover */
       transition: background-color 0.3s; /* Smooth background color transition */
+      animation: jump 1s infinite; /* Apply jump animation */
     }
 
     button:hover {
       background-color: deepskyblue; /* Change color on hover */
+    }
+
+    /* Keyframe animation for jumping */
+    @keyframes jump {
+      0%, 100% {
+        transform: translateY(0); /* Starting position */
+      }
+      50% {
+        transform: translateY(-20px); /* Jump up */
+      }
     }
   </style>
 </head>
@@ -59,7 +73,7 @@
     let rotationDegree = 0;
 
     function rotateImage() {
-      rotationDegree += 360; // Increase rotation by 90 degrees
+      rotationDegree += 90; // Increase rotation by 90 degrees
       document.getElementById('myImage').style.transform = `rotate(${rotationDegree}deg)`;
     }
   </script>
