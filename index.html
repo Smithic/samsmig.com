@@ -72,6 +72,10 @@
   <p>
     Meowscles Fortnite
   </p>
+  
+  <!-- Audio element to play sound -->
+  <audio id="soundEffect" src="meow.mp3"></audio> <!-- Replace with your sound file URL -->
+
   <form> 
     <button type="button" onclick="rotateImage()">I love Fortnite <3</button>
   </form>
@@ -80,8 +84,12 @@
     let rotationDegree = 0;
 
     function rotateImage() {
-      rotationDegree += 360; // Increase rotation by 90 degrees
+      rotationDegree += 360; // Increase rotation by 360 degrees
       document.getElementById('myImage').style.transform = `rotate(${rotationDegree}deg)`;
+      
+      // Play sound
+      const sound = document.getElementById('soundEffect');
+      sound.play();
     }
   </script>
   
