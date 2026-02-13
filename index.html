@@ -1,97 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Favourite Hobby</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center horizontally */
-      justify-content: center; /* Center vertically */
-      height: 100vh; /* Full height of the viewport */
-      margin: 0; /* Remove default margin */
-      text-align: center; /* Center text */
-      font-family: 'Comic Sans MS', cursive, sans-serif; /* Set font to Comic Sans */
-      animation: colorChange 10s infinite alternate; /* Apply background color animation */
-    }
 
-    @keyframes colorChange {
-      0% { background-color: tomato; }
-      25% { background-color: lightblue; }
-      50% { background-color: lightgreen; }
-      75% { background-color: lavender; }
-      100% { background-color: tomato; }
-    }
+<!doctype html><!--HTML5 doctype declaration -->
+<html lang="en"><!--default language of the document content -->
+	
+    <head>
+		<meta charset="utf-8"><!--character encoding for the document (Unicode) -->
+		<title>Learning Journal template</title><!--web page title -->
+	</head>
 
-    p {
-      border: 2px solid powderblue;
-      padding: 10px;
-      margin: 20px 0; /* Add margin for spacing */
-      animation: jump 1s infinite; /* Apply jump animation */
-    }
-
-    #myImage {
-      transition: transform 0.5s; /* Smooth transition for rotation */
-      max-width: 100%; /* Make image responsive */
-      height: auto; /* Maintain aspect ratio */
-    }
-
-    /* Styles for the massive button */
-    button {
-      font-size: 24px; /* Increase font size */
-      padding: 20px 40px; /* Add padding */
-      background-color: lightblue; /* Button background color */
-      border: none; /* Remove border */
-      border-radius: 10px; /* Rounded corners */
-      cursor: pointer; /* Change cursor on hover */
-      transition: background-color 0.3s; /* Smooth background color transition */
-      animation: jump 1s infinite; /* Apply jump animation */
-    }
-
-    button:hover {
-      background-color: deepskyblue; /* Change color on hover */
-    }
-
-    /* Keyframe animation for jumping */
-    @keyframes jump {
-      0%, 100% {
-        transform: translateY(0); /* Starting position */
-      }
-      50% {
-        transform: translateY(-20px); /* Jump up */
-      }
-    }
-  </style>
-</head>
 <body>
-  <h1>I love the new Fortnite season :)</h1>
-  <img id="myImage" src="https://raw.githubusercontent.com/Smithic/samsmig.com/main/meow.jpg" alt="Meowscles Fortnite">
+<!--Markup all web page content inside the 'body' tags -->
+	<div id="wrapper">
+	<!--The 'wrapper' contains all the page content-->
+	
+    <header><!--The main heading for the page -->
+		<h1>Tutorial</h1>
+		<h2>sub-heading</h2>
+	</header>
+	
+    <nav><!--The primary navigation for the page -->
+	<ul>
+		<li><a href="">Learning Journal</a></li>
+		<li><a href="">Tutorial</a></li>
+        <li><a href="">Contact me</a></li>
+	</ul>
+	</nav>
+    
+    <main><!--The main page content -->
+        
+        	<h2>Weekly Posts</h2>
+	
+    	<article>
+			<header>
+			<h3>Week 1: ...</h3>
+			</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat, risus et hendrerit consequat, ante lectus 
+porttitor tellus, eget blandit urna nibh a metus. </p>
 
-  <p>
-    Meowscles Fortnite
-  </p>
+        <p>Some reference here to my own reading and research, explaining what I have done and what I have learned from it.</p>
+        
+		</article>
+           
+    </main><!--Close main page content --> 
+        
+        <aside>
+        
+        	<h2>References</h2>
+            
+            	<ol>
+                	<li>...</li>
+                    <li>...</li>
+                </ol>
+            
+        </aside>    
+ 
   
-  <!-- Audio element to play sound -->
-  <audio id="soundEffect" src="meow.mp3"></audio> <!-- Replace with your sound file URL -->
+	<footer><!--Footer content -->
+		<small>&copy; 2019, author.</small>
+	</footer>
 
-  <form> 
-    <button type="button" onclick="rotateImage()">I love Fortnite <3</button>
-  </form>
-
-  <script>
-    let rotationDegree = 0;
-
-    function rotateImage() {
-      rotationDegree += 360; // Increase rotation by 360 degrees
-      document.getElementById('myImage').style.transform = `rotate(${rotationDegree}deg)`;
-      
-      // Play sound
-      const sound = document.getElementById('soundEffect');
-      sound.play();
-    }
-  </script>
-  
-</body>
-</html>
+	</div><!--Close 'wrapper' div -->
+</body><!--Close 'body' -->
+</html><!--Close 'html' -->
